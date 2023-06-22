@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nombre magique</title>
+  </head>
+
+<body>
+
+    <div id="label1">Entrez votre proposition</div>
+    <input id="textBox1" value="">
+    <input type="button" id="button1" value="Verifier" onclick="verif();"> 
+
+    <script>
+
+function verif() {
+  
+  var Nb = parseInt(document.getElementById("textBox1").value);
+  
+  
+  var numAleat = Math.floor(Math.random() * 2) + 1;
+  
+  
+  if (Nb === numAleat) {
+    
+    document.getElementById("label1").innerHTML = "Give me five!!!";
+  } else if (Nb > numAleat) {
+   
+    document.getElementById("label1").innerHTML = "trop grand.";
+  } else {
+    
+    document.getElementById("label1").innerHTML = "trop petit.";
+  }
+}
+
+
+    </script>
+
+</body>
+</html>
